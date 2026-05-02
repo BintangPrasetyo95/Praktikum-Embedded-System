@@ -1,0 +1,208 @@
+{
+    "version": 1,
+    "author": "Bintang Prastyo",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-arduino-uno",
+            "id": "uno",
+            "top": 220,
+            "left": 0,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-lcd1602",
+            "id": "lcd1",
+            "top": -70.4,
+            "left": 236,
+            "attrs": {
+                "pins": "i2c",
+                "address": "0x27"
+            }
+        },
+        {
+            "type": "wokwi-hc-sr04",
+            "id": "ultra1",
+            "top": 87.9,
+            "left": 360.7,
+            "attrs": {
+                "distance": "400"
+            }
+        },
+        {
+            "type": "wokwi-ntc-temperature-sensor",
+            "id": "temp1",
+            "top": 329,
+            "left": 431.4,
+            "attrs": {
+                "temperature": "25"
+            }
+        },
+        {
+            "type": "wokwi-buzzer",
+            "id": "bz1",
+            "top": 50.4,
+            "left": 1.8,
+            "attrs": {
+                "volume": "0.5"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led1",
+            "top": 73.2,
+            "left": 128.6,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": 157.55,
+            "left": 76.8,
+            "attrs": {
+                "value": "220"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "uno:A4",
+            "lcd1:SDA",
+            "green",
+            [
+                "h-15.6",
+                "v-430.9"
+            ]
+        ],
+        [
+            "uno:A5",
+            "lcd1:SCL",
+            "blue",
+            [
+                "h-34.7",
+                "v-421.4"
+            ]
+        ],
+        [
+            "uno:5V",
+            "lcd1:VCC",
+            "red",
+            [
+                "h51.2",
+                "v-430.8"
+            ]
+        ],
+        [
+            "uno:GND.1",
+            "lcd1:GND",
+            "black",
+            [
+                "v-56.2",
+                "h76.5",
+                "v-211.2"
+            ]
+        ],
+        [
+            "uno:12",
+            "ultra1:TRIG",
+            "orange",
+            [
+                "v-8.2",
+                "h307.5"
+            ]
+        ],
+        [
+            "uno:11",
+            "ultra1:ECHO",
+            "yellow",
+            [
+                "v11",
+                "h308"
+            ]
+        ],
+        [
+            "uno:5V",
+            "ultra1:VCC",
+            "red",
+            [
+                "v-56.3",
+                "h272"
+            ]
+        ],
+        [
+            "uno:GND.1",
+            "ultra1:GND",
+            "black",
+            [
+                "v20.6",
+                "h346.5"
+            ]
+        ],
+        [
+            "uno:A0",
+            "temp1:OUT",
+            "purple",
+            [
+                "v10.9",
+                "h358.4"
+            ]
+        ],
+        [
+            "uno:5V",
+            "temp1:VCC",
+            "red",
+            [
+                "v20.5",
+                "h425.6",
+                "v-67.2"
+            ]
+        ],
+        [
+            "uno:GND.1",
+            "temp1:GND",
+            "black",
+            [
+                "v87.8",
+                "h450.9"
+            ]
+        ],
+        [
+            "uno:8",
+            "bz1:1",
+            "brown",
+            [
+                "v-37",
+                "h-144.2"
+            ]
+        ],
+        [
+            "uno:GND.2",
+            "bz1:2",
+            "black",
+            []
+        ],
+        [
+            "uno:9",
+            "r1:1",
+            "pink",
+            [
+                "v-46.6",
+                "h-86.2"
+            ]
+        ],
+        [
+            "r1:2",
+            "led1:A",
+            "pink",
+            []
+        ],
+        [
+            "uno:GND.2",
+            "led1:C",
+            "black",
+            []
+        ]
+    ]
+}

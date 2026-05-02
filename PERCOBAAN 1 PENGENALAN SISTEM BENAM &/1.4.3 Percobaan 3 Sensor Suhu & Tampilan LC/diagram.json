@@ -1,0 +1,154 @@
+{
+    "version": 1,
+    "author": "Bintang Prasetyo",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-arduino-uno",
+            "id": "uno",
+            "top": 0.6,
+            "left": -0.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-dht22",
+            "id": "dht",
+            "top": -201.3,
+            "left": 292.2,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-lcd1602",
+            "id": "lcd",
+            "top": -224,
+            "left": -224.8,
+            "attrs": {
+                "pins": "i2c"
+            }
+        },
+        {
+            "type": "wokwi-buzzer",
+            "id": "buzz",
+            "top": -199.2,
+            "left": 193.8,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led",
+            "top": -80.4,
+            "left": -101.8,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": -44.05,
+            "left": 19.2,
+            "attrs": {
+                "value": "220"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "uno:5V",
+            "dht:VCC",
+            "red",
+            [
+                "v76.7",
+                "h147.8"
+            ]
+        ],
+        [
+            "uno:GND",
+            "dht:GND",
+            "black",
+            []
+        ],
+        [
+            "uno:8",
+            "dht:SDA",
+            "green",
+            [
+                "v-28.8",
+                "h144.3"
+            ]
+        ],
+        [
+            "uno:5V",
+            "lcd:VCC",
+            "red",
+            [
+                "v86.3",
+                "h-418.6",
+                "v-460.9"
+            ]
+        ],
+        [
+            "uno:GND",
+            "lcd:GND",
+            "black",
+            []
+        ],
+        [
+            "uno:A4",
+            "lcd:SDA",
+            "green",
+            [
+                "v28.7",
+                "h-495",
+                "v-393.8"
+            ]
+        ],
+        [
+            "uno:A5",
+            "lcd:SCL",
+            "blue",
+            [
+                "v38.3",
+                "h-533.3",
+                "v-393.9"
+            ]
+        ],
+        [
+            "uno:7",
+            "buzz:1",
+            "purple",
+            [
+                "h-6",
+                "v-124.8"
+            ]
+        ],
+        [
+            "buzz:2",
+            "uno:GND",
+            "black",
+            []
+        ],
+        [
+            "uno:6",
+            "r1:1",
+            "orange",
+            [
+                "v-48",
+                "h-82.7"
+            ]
+        ],
+        [
+            "r1:2",
+            "led:A",
+            "orange",
+            []
+        ],
+        [
+            "led:C",
+            "uno:GND",
+            "black",
+            []
+        ]
+    ],
+    "dependencies": {}
+}

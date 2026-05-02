@@ -1,0 +1,135 @@
+{
+    "version": 1,
+    "author": "Bintang Prasetyo",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-breadboard-mini",
+            "id": "bb1",
+            "top": -145.4,
+            "left": 64.8,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-arduino-uno",
+            "id": "uno",
+            "top": 10.2,
+            "left": -10.2,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led1",
+            "top": -176.4,
+            "left": 90.2,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": -130.45,
+            "left": 115.2,
+            "attrs": {
+                "value": "220000"
+            }
+        },
+        {
+            "type": "wokwi-buzzer",
+            "id": "bz1",
+            "top": -218.4,
+            "left": 174.6,
+            "attrs": {
+                "volume": "0.1"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "led1:A",
+            "bb1:5t.a",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "led1:C",
+            "bb1:4t.a",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "r1:1",
+            "bb1:5t.b",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "r1:2",
+            "bb1:11t.b",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "bz1:1",
+            "bb1:14t.a",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "bz1:2",
+            "bb1:15t.a",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "uno:GND.1",
+            "bb1:4t.b",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "uno:GND.1",
+            "bb1:14t.b",
+            "black",
+            [
+                "v-105.6",
+                "h38.7",
+                "h57.6"
+            ]
+        ],
+        [
+            "uno:8",
+            "bb1:5t.c",
+            "red",
+            [
+                "v-76.8",
+                "h-47.6"
+            ]
+        ],
+        [
+            "uno:7",
+            "bb1:15t.b",
+            "red",
+            [
+                "v-76.8",
+                "h32.4"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}

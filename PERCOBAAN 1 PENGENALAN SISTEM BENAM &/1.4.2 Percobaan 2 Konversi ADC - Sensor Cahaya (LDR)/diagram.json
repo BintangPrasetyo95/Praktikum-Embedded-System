@@ -1,0 +1,232 @@
+{
+    "version": 1,
+    "author": "DhoooXx Putra",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-breadboard-mini",
+            "id": "bb1",
+            "top": -155,
+            "left": 237.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-arduino-uno",
+            "id": "uno",
+            "top": 19.8,
+            "left": 85.8,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-photoresistor-sensor",
+            "id": "ldr1",
+            "top": -112,
+            "left": -37.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": -102.2,
+            "left": 219.95,
+            "rotate": 270,
+            "attrs": {
+                "value": "10000"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r2",
+            "top": -111.8,
+            "left": 344.75,
+            "rotate": 270,
+            "attrs": {
+                "value": "220"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led1",
+            "top": -186,
+            "left": 349.4,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led2",
+            "top": -186,
+            "left": 378.2,
+            "attrs": {
+                "color": "green"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r3",
+            "top": -110.4,
+            "left": 373.85,
+            "rotate": 270,
+            "attrs": {
+                "value": "220"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "uno:5V",
+            "ldr1:VCC",
+            "red",
+            [
+                "h-169",
+                "v-240.1",
+                "h67.2",
+                "v-67.2"
+            ]
+        ],
+        [
+            "ldr1:AO",
+            "uno:A0",
+            "green",
+            [
+                "h76.8",
+                "v258"
+            ]
+        ],
+        [
+            "bb1:17b.g",
+            "uno:2",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "bb1:16t.b",
+            "uno:GND.1",
+            "black",
+            [
+                "v144",
+                "h-192.3"
+            ]
+        ],
+        [
+            "r2:1",
+            "bb1:14b.f",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "r2:2",
+            "bb1:14t.b",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "led1:A",
+            "bb1:14t.a",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "led1:C",
+            "bb1:13t.a",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "uno:GND.1",
+            "bb1:13t.b",
+            "black",
+            [
+                "v-38.4",
+                "h163.5"
+            ]
+        ],
+        [
+            "r1:1",
+            "bb1:1b.g",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "r1:2",
+            "bb1:1t.c",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "uno:GND.1",
+            "bb1:1b.h",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "ldr1:GND",
+            "bb1:1t.a",
+            "black",
+            [
+                "h19.2",
+                "v-48.4",
+                "h96"
+            ]
+        ],
+        [
+            "led2:A",
+            "bb1:17t.a",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "led2:C",
+            "bb1:16t.a",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "r3:1",
+            "bb1:17b.f",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "r3:2",
+            "bb1:17t.b",
+            "",
+            [
+                "$bb"
+            ]
+        ],
+        [
+            "uno:3",
+            "bb1:14b.g",
+            "red",
+            [
+                "v-28.8",
+                "h61.6"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}
