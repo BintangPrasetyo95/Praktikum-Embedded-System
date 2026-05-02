@@ -21,3 +21,9 @@ Memahami konsep dasar penggunaan `digitalWrite()` dan `tone()` untuk mengontrol 
 
 ---
 
+## Percobaan 1.4.2: Konversi ADC - Sensor Cahaya (LDR)
+Program membaca intensitas cahaya dari sensor LDR dan mengontrol kecerahan dua LED berdasarkan nilai ADC yang dikonversi.
+
+## Percobaan 1.4.3: Sensor Suhu & Tampilan LCD
+Program mengukur suhu dan kelembaban menggunakan sensor DHT22, menampilkannya di LCD 16x2, dan mengaktifkan alarm (LED & buzzer) ketika suhu melampaui ambang batas.
+
