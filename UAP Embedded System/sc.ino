@@ -33,7 +33,7 @@ void setup() {
 
 void loop() {
   // 1. Read the sensors
-  // Note: Most flame sensors return LOW when fire is detected (Active LOW)
+  // Note: Most flame sensors return HIGH when fire is detected (Active LOW)
   int flameState = digitalRead(FLAME_PIN); 
   float temperature = dht.readTemperature();
   float humidity = dht.readHumidity();
@@ -51,10 +51,10 @@ void loop() {
   Serial.print("°C | Humidity: ");
   Serial.print(humidity);
   Serial.print("% | Flame State: ");
-  Serial.println(temperature > TEMP_WARNING ? "FIRE DETECTED!" : "Clear");
+  Serial.println(flameState == HIGH ? "FIRE DETECTED!" : "Clear");
 
   // 2. Logic & Alerts
-  if (flameState == LOW) {
+  if (flameState == HIGH) {
     // CRITICAL ALERT: Fire detected
     digitalWrite(LED_RED, HIGH);
     digitalWrite(LED_YELLOW, LOW);
