@@ -51,7 +51,7 @@ void loop() {
   Serial.print("°C | Humidity: ");
   Serial.print(humidity);
   Serial.print("% | Flame State: ");
-  Serial.println(flameState == LOW ? "FIRE DETECTED!" : "Clear");
+  Serial.println(temperature > TEMP_WARNING ? "FIRE DETECTED!" : "Clear");
 
   // 2. Logic & Alerts
   if (flameState == LOW) {
